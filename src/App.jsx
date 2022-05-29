@@ -1,45 +1,67 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
-
+import logo from "./logo.svg";
+import "./App.css";
+import { useState } from "react";
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [disc, setDisc] = useState(0);
+  const [c1, setC1] = useState("d1");
+  const [c2, setC2] = useState("d2");
+  const [c3, setC3] = useState("d3");
+  const [c4, setC4] = useState("d4");
+  const [c5, setC5] = useState("d5");
+  const setdisk = () => {
+    if (disc == 1) {
+      setC1("disk1");
+    }
+    if (disc == 2) {
+      setC2("disk2");
+    }
+    if (disc == 3) {
+      setC3("disk3");
+    }
+    if (disc == 4) {
+      setC4("disk4");
+    }
+    if (disc == 5) {
+      setC5("disk5");
+    }
+  };
+  const takevalue = (e) => {
+    const { value } = e.target;
+    setDisc(value);
+  };
+  const repalce1 = () => {
+    setC1("d1");
+  };
+  const repalce2 = () => {
+    setC2("d2");
+  };
+  const repalce3 = () => {
+    setC3("d3");
+  };
+  const repalce4 = () => {
+    setC4("d4");
+  };
+  const repalce5 = () => {
+    setC5("d5");
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      <div className="container">
+        <div>
+          <div className="left-div"></div>
+          <br />
+          <input className="input-taker" placeholder="Enter Number (1-5)" type="number" onChange={takevalue} />
+          <button onClick={setdisk}>Shoot</button>
+        </div>
+        <div className="right-div">
+          <div className={c1} onClick={repalce1}></div>
+          <div className={c2} onClick={repalce2}></div>
+          <div className={c3} onClick={repalce3}></div>
+          <div className={c4} onClick={repalce4}></div>
+          <div className={c5} onClick={repalce5}></div>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
-
-export default App
+export default App;

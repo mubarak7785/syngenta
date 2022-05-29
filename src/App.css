@@ -1,42 +1,94 @@
-.App {
-  text-align: center;
+.container{
+  margin-top: 5%;
+  margin-left: 5%;
+   display: flex;
+   gap: 200px;
+}
+.container>div:nth-child(1){
+
+  width: 50%;
+}
+.left-div{
+   width: 100%;
+   height: 200px;
+   border: 1px solid black;
+}
+.right-div{
+border: 1px solid black;
+display: flex;
+flex-direction: column;
+width: 80px;
+justify-content: center;
+padding: 20px;
+justify-content: space-around;
+}
+.right-div>div{
+   width: 70px;
+   height: 70px;
+  border: 1px solid black;
+  border-radius: 35px;
+  margin-bottom: 10px;
+}
+.d1{
+   background-color: blue;
+}
+.d2{
+  background-color: yellow;
+}
+.d3{
+  background-color: black;
+}
+.d4{
+ background-color: red;
+}
+.d5{
+  background-color: gray;
+ }
+ .disk1{
+  left: 70px;
+  top: 100px;
+  position: fixed;
+  background-color: blue;
+}
+.disk2{
+  left: 150px;
+  top: 100px;
+  position: fixed;
+  background-color: yellow;
+}
+.disk3{
+  left: 230px;
+  top: 100px;
+  position: fixed;
+  background-color: black;
+}
+.disk4{
+  left: 310px;
+  top: 100px;
+  position: fixed;
+  background-color: red;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.disk5{
+  left: 390px;
+  top: 100px;
+  position: fixed;
+  background-color: gray;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button{
+  background-color: white;
+  color: blue;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button:hover{
+  cursor: pointer;
   color: white;
+  background-color: blue;
+  
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-button {
-  font-size: calc(10px + 2vmin);
+input{
+  font-size: 20px;
 }
